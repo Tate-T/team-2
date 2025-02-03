@@ -10,6 +10,7 @@
 body {
     font-family: "Montserrat Alternates", sans-serif;
     background-color: $white-background;
+    // background-image: url('../../img/background.png')
 
 }
 
@@ -18,9 +19,20 @@ body {
     padding-right: 10px;
     padding-left: 10px;
     width: 1070px;
-    outline: solid red;
+    // outline: solid red;
 }
 
-section {
-    outline: solid green
+// section {
+//     outline: solid green
+
+// }
+
+.line {
+    height: 1px;
+    background-color: $black-text;
+    position: absolute;
+    width: 35%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
