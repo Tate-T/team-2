@@ -1,0 +1,93 @@
+.calculator {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+
+    &__div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    &__input1 {
+        width: 120px;
+        height: 40px;
+        border-radius: 50px;
+        border: none;
+        background-color: $input-color;
+        color: $input-text;
+        font-size: 12px;
+        padding-left: 25px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        box-shadow: 7px 4px 5px #d2c5c5;
+        margin-right: 50px;
+    }
+
+    &__button-div {
+        display: flex;
+        flex-wrap: wrap;
+        width: 62px;
+        gap: 10px;
+        margin-right: 50px;
+    }
+
+    &__button {
+        cursor: pointer;
+        width: 26px;
+        height: 26px;
+        border: none;
+        border-radius: 50px;
+        background-color: $black-text;
+        color: $white-background;
+        box-shadow: 4px 4px 3px #9a8a8a;
+    }
+
+    &__input2 {
+        width: 120px;
+        height: 40px;
+        border-radius: 50px;
+        border: none;
+        background-color: $input-color;
+        color: $input-text;
+        font-size: 12px;
+        padding-left: 25px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        box-shadow: 7px 4px 5px #d2c5c5;
+    }
+
+    &__equals {
+        cursor: pointer;
+        width: 26px;
+        height: 26px;
+        border: none;
+        border-radius: 50px;
+        background-color: $black-text;
+        color: $white-background;
+        box-shadow: 4px 4px 3px #9a8a8a;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    &__input3 {
+        width: 100px;
+        height: 40px;
+        border-radius: 50px;
+        border: none;
+        background-color: $input-color;
+        color: $input-text;
+        font-size: 12px;
+        padding-left: 23px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        // box-shadow: 7px 4px 5px #d2c5c5;
+    }
+}

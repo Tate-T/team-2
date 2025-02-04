@@ -1,0 +1,38 @@
+.three-numbers {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+
+    &__title {
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__div {
+        display: flex;
+        gap: 45px;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    &__input {
+        width: 120px;
+        height: 40px;
+        border-radius: 50px;
+        border: none;
+        background-color: $input-color;
+        color: $input-text;
+        font-size: 12px;
+        padding-left: 25px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        box-shadow: 7px 4px 5px #d2c5c5;
+    }
+
+    &__text {
+        font-size: 12px;
+        text-align: center;
+    }
+}
