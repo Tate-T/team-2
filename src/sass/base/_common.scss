@@ -14,13 +14,7 @@ body {
 
 }
 
-.container {
-    margin: 0 auto;
-    padding-right: 10px;
-    padding-left: 10px;
-    width: 1070px;
-    // outline: solid red;
-}
+
 
 // section {
 //     outline: solid green
@@ -35,4 +29,31 @@ body {
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+body {
+    background-image: url('../../img/background.png');
+    background-position: center 100px;
+    background-repeat: no-repeat;
+    background-size: 1440px auto;
+    background-color: $background
+}
+
+.container {
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 1070px;
+    
+    // outline: solid red;
+}
+
+section {
+    background-color: $white-background;
+    width: 1090px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: $white-background;
 }
