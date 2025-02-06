@@ -22,10 +22,10 @@ body {
 // }
 
 .line {
-    height: 1px;
+    height: 0.5px;
     background-color: $black-text;
     position: absolute;
-    width: 35%;
+    width: 536px;
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
