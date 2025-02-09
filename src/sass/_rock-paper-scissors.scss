@@ -1,6 +1,7 @@
 .r-p-s {
   padding-top: 36px;
   padding-bottom: 36px;
+  position: relative;
 
   &__title {
     text-align: center;
@@ -60,5 +61,10 @@
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 20px;
+  }
+
+  &__score {
+    position: absolute;
+    right: 20%;
   }
 }
