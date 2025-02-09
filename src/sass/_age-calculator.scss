@@ -1,6 +1,7 @@
 .age-calculator {
   padding-top: 36px;
   padding-bottom: 36px;
+  position: relative;
   
 
   &__title {
@@ -17,6 +18,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    gap: 33px;
   }
 
   &__input {
@@ -49,9 +51,8 @@
     height: 40px;
   }
 
-  &__svg {
+  &__line-svg {
     margin-left: 33px;
-    margin-right: 33px;
   }
 
 }
