@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let hours = Math.floor(totalMinutes / 60);
     let minutes = totalMinutes % 60;
-
+    
     outputText.textContent = `Результат: ${hours}:${minutes}`;
   }
 

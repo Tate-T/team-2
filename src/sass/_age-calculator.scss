@@ -2,7 +2,6 @@
   padding-top: 36px;
   padding-bottom: 36px;
   position: relative;
-  
 
   &__title {
     text-align: center;
@@ -55,4 +54,10 @@
     margin-left: 33px;
   }
 
+  &__text {
+    color: $black-text;
+    font-size: 12px;
+    font-family: Montserrat Alternates;
+    font-weight: 400;
+  }
 }
