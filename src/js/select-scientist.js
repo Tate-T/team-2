@@ -76,17 +76,60 @@ button6.addEventListener('click', () => {
 });
 
 button7.addEventListener('click', () => {
+    let latestYear = 0;
+    let latestIndex = 0;
     for (let i = 0; i < bornSpans.length; i++) {
         const birthYear = Number(bornSpans[i].innerHTML);
-        const overlay = bornSpan.closest('.select-scientist__div-item').lastElementChild;
-        if ( Number(bornSpans[i].innerHTML) > Number(bornSpans[i + 1].innerHTML)) {
-            overlay.style.backgroundColor = 'transparent';
-        } else {
-            overlay.style.backgroundColor = 'rgb(217, 217, 217)';
+        if (birthYear > latestYear) {
+            latestYear = birthYear;
+            latestIndex = i;
         }
     }
-    
+    for (let i = 0; i < bornSpans.length; i++) {
+        const overlay = bornSpans[i].closest('.select-scientist__div-item').lastElementChild;
+        if (i === latestIndex) {
+            overlay.style.backgroundColor = 'transparent';
+        } else {
+            overlay.style.backgroundColor = 'rgb(217, 217, 217)'; 
+        }
+    }
 });
+
+
+
+button8.addEventListener('click', () => {
+    let indexLong = 0;
+    let longestSubYear = 0;
+    let indexShort = 0
+    let shortestSubYear = Infinity 
+
+    for (let i = 0; i < bornSpans.length; i++) {
+        const birthYear = Number(bornSpans[i].innerHTML);
+        const deathYear = Number(deadSpans[i].innerHTML);
+        const subYear = deathYear - birthYear;
+        if (subYear < shortestSubYear) {
+            shortestSubYear = subYear;
+            indexShort = i;
+        }
+        if (subYear > longestSubYear) {
+            longestSubYear = subYear;
+            indexLong = i;
+        }
+    }
+
+    for (let i = 0; i < bornSpans.length; i++) {
+        const overlay = bornSpans[i].closest('.select-scientist__div-item').lastElementChild;
+        if (i === indexShort) {
+            overlay.style.backgroundColor = 'transparent'; 
+        } else if (i === indexLong) {
+            overlay.style.backgroundColor = 'transparent';
+        } else {
+            overlay.style.backgroundColor = 'rgb(217, 217, 217)'; 
+        }
+    }
+})
+
+
 
 
 
