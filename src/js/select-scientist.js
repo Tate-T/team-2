@@ -16,6 +16,8 @@ const button8 = document.querySelector('#button8id')
 const button9 = document.querySelector('#button9id')
 const button10 = document.querySelector('#button10id')
 
+
+
 console.log(button1)
 
 button10.addEventListener('click', () => {
@@ -117,6 +119,7 @@ button8.addEventListener('click', () => {
         }
     }
 
+
     for (let i = 0; i < bornSpans.length; i++) {
         const overlay = bornSpans[i].closest('.select-scientist__div-item').lastElementChild;
         if (i === indexShort) {
@@ -130,6 +133,20 @@ button8.addEventListener('click', () => {
 })
 
 
+
+
+
+
+button9.addEventListener('click', () => {
+    for (let i = 0; i < nameSpans.length; i++){
+        const overlay = nameSpans[i].closest('.select-scientist__div-item').lastElementChild;
+        if (nameSpans[i].innerHTML.trim().charAt(0).toUpperCase() === surnameSpans[i].innerHTML.trim().charAt(0).toUpperCase()) {
+            overlay.style.backgroundColor = 'transparent';
+        } else {
+            overlay.style.backgroundColor = 'rgb(217, 217, 217)';
+        }
+    }
+})
 
 
 

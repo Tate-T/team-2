@@ -7,7 +7,7 @@ const element1 = document.querySelector('#element1')
 const element2 = document.querySelector('#element2')
 
 button1.addEventListener("click", () => {
-    if (image.src.endsWith("therock.jpg")) {
+    if (image.src.endsWith("andrey.jpg")) {
         image.src = "../img/dicaprio.jpg";
         name1.innerHTML = "Leonardo Dicaprio";
         text.innerHTML = "Знімався в фільмах: Поймай мене якщо сможешь, Початок, Проклятий Острів";
@@ -16,10 +16,10 @@ button1.addEventListener("click", () => {
         element1.style.width = '18px'
         element1.style.backgroundColor = '#D9D9D9'
     } else {
-        image.src = "../img/therock.jpg";
-        name1.innerHTML = "The Rock";
+        image.src = "../img/andrey.jpg";
+        name1.innerHTML = "Андрій Норик";
         text.innerHTML =
-            "Знімався в фільмах: Джуманджи, Форсаж, Красне Повідомлення";
+            "Зробив модалку, футер та секції age-calculator, rock-paper-scissors та football";
         element1.style.width = '30px';
         element1.style.backgroundColor = '#797979'
         element2.style.width = '18px'
@@ -28,7 +28,7 @@ button1.addEventListener("click", () => {
 });
 
 button2.addEventListener("click", () => {
-    if (image.src.endsWith("therock.jpg")) {
+    if (image.src.endsWith("andrey.jpg")) {
         image.src = "../img/dicaprio.jpg";
         name1.innerHTML = "Leonardo Dicaprio";
         text.innerHTML = "Знімався в фільмах: Поймай мене якщо сможешь, Початок, Проклятий Острів";
@@ -37,10 +37,10 @@ button2.addEventListener("click", () => {
         element1.style.width = '18px'
         element1.style.backgroundColor = '#D9D9D9'
     } else {
-        image.src = "../img/therock.jpg";
-        name1.innerHTML = "The Rock";
+        image.src = "../img/andrey.jpg";
+        name1.innerHTML = "Андрій Норик";
         text.innerHTML =
-            "Знімався в фільмах: Джуманджи, Форсаж, Красне Повідомлення";
+            "Зробив модалку, футер та секції age-calculator, rock-paper-scissors та football";
         element1.style.width = '30px';
         element1.style.backgroundColor = '#797979'
         element2.style.width = '18px'
