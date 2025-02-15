@@ -7,30 +7,46 @@ document.addEventListener("DOMContentLoaded", () => {
   const computerScoreEl = document.querySelector("#computer-score");
   const computerChoiceBtn = document.querySelector(".r-p-s__computer-choice");
 
-  document.querySelectorAll(".r-p-s__button").forEach((button, index) => {
-    button.addEventListener("click", () => playRound(choices[index]));
+  const buttons = document.querySelectorAll(".r-p-s__button");
+
+  buttons.forEach((button) => {
+    const img = button.querySelector("img");
+    button.dataset.choice = img.alt;
+    button.addEventListener("click", () => playRound(button.dataset.choice));
   });
 
+  function getComputerChoice() {
+    return choices[Math.floor(Math.random() * choices.length)];
+  }
+
+  function determineWinner(userChoice, computerChoice) {
+    if (userChoice === computerChoice) return "Нічия!";
+
+    const winConditions = {
+      rock: "scissors",
+      scissors: "paper",
+      paper: "rock",
+    };
+
+    return winConditions[userChoice] === computerChoice
+      ? "Ви виграли раунд!"
+      : "Комп'ютер виграв раунд!";
+  }
+
   function playRound(userChoice) {
-    const computerChoice = choices[Math.floor(Math.random() * 3)];
-    let result = "Нічия!";
+    const computerChoice = getComputerChoice();
+    const result = determineWinner(userChoice, computerChoice);
 
-    if (
-      (userChoice === "rock" && computerChoice === "scissors") ||
-      (userChoice === "scissors" && computerChoice === "paper") ||
-      (userChoice === "paper" && computerChoice === "rock")
-    ) {
-      result = "Ви виграли раунд!";
-      scores.user++;
-    } else if (userChoice !== computerChoice) {
-      result = "Комп'ютер виграв раунд!";
-      scores.computer++;
-    }
+    if (result === "Ви виграли раунд!") scores.user++;
+    if (result === "Комп'ютер виграв раунд!") scores.computer++;
 
-    computerChoiceBtn.textContent = `Комп'ютер вибрав: ${computerChoice}`;
+    updateUI(result, computerChoice);
+  }
 
+  function updateUI(result, computerChoice) {
     resultText.textContent = result;
     userScoreEl.textContent = scores.user;
     computerScoreEl.textContent = scores.computer;
+    computerChoiceBtn.textContent = `Комп'ютер вибрав: ${computerChoice}`;
   }
 });
