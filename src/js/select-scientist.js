@@ -165,11 +165,34 @@ button3.addEventListener('click', () => {
         const overlay = item.lastElementChild;
         overlay.style.backgroundColor = 'transparent';
     })
-    for (item of items){
-        
+    for (let i = 0; i < items.length; i++){
+        const itemId = items[i].querySelector('.select-scientist__id');
+        itemId.innerHTML = `${i + 1}.`
     }
 });
 
+
+button5.addEventListener('click', () => {
+    const list = document.querySelector('.select-scientist__div-list');
+    const items = [...list.querySelectorAll('.select-scientist__div-item')];
+    
+    items.sort((a, b) => {
+        const ageA = Number(a.querySelector('.scientist-born').innerHTML) -  Number(a.querySelector('.scientist-dead').innerHTML);
+        const ageB = Number(b.querySelector('.scientist-born').innerHTML) -  Number(b.querySelector('.scientist-dead').innerHTML);
+        list.innerHTML = ''
+        return ageA - ageB
+
+    });
+    items.forEach((item) => {
+        list.appendChild(item)
+        const overlay = item.lastElementChild;
+        overlay.style.backgroundColor = 'transparent';
+    })
+    for (let i = 0; i < items.length; i++){
+        const itemId = items[i].querySelector('.select-scientist__id');
+        itemId.innerHTML = `${i + 1}.`
+    }
+});
 
 
 
