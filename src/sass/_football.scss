@@ -1,6 +1,7 @@
 .football {
-  padding-top: 36px;
-  padding-bottom: 36px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
 
   &__container {
     display: flex;
@@ -12,7 +13,7 @@
   &__title {
     color: $black-text;
     font-size: 16px;
-    font-family: Montserrat Alternates;
+    font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
   }
 

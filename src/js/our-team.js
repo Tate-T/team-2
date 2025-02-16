@@ -8,9 +8,9 @@ const element2 = document.querySelector('#element2')
 
 button1.addEventListener("click", () => {
     if (image.src.endsWith("andrey.jpg")) {
-        image.src = "../img/dicaprio.jpg";
-        name1.innerHTML = "Leonardo Dicaprio";
-        text.innerHTML = "Знімався в фільмах: Поймай мене якщо сможешь, Початок, Проклятий Острів";
+        image.src = "../img/stas.jpg";
+        name1.innerHTML = "Стас Трунов";
+        text.innerHTML = "Зробив секції header, check-age, calculator, guess-number, select-scinetist, our-team, three-numbers, google dino";
         element2.style.width = '30px';
         element2.style.backgroundColor = '#797979'
         element1.style.width = '18px'
@@ -29,9 +29,9 @@ button1.addEventListener("click", () => {
 
 button2.addEventListener("click", () => {
     if (image.src.endsWith("andrey.jpg")) {
-        image.src = "../img/dicaprio.jpg";
-        name1.innerHTML = "Leonardo Dicaprio";
-        text.innerHTML = "Знімався в фільмах: Поймай мене якщо сможешь, Початок, Проклятий Острів";
+        image.src = "../img/stas.jpg";
+        name1.innerHTML = "Стас Трунов";
+        text.innerHTML = "Зробив секції header, check-age, calculator, guess-number, select-ssinetist, our-team, three-numbers, google dino";
         element2.style.width = '30px'
         element2.style.backgroundColor = '#797979'
         element1.style.width = '18px'
