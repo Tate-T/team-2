@@ -13,11 +13,9 @@ function leapYear (year){
 button.addEventListener('click', () => {
     if (leapYear(Number(input.value)) === true){
         text.innerHTML = 'Ви народилися у високосний рік!'
-        text.style.color = '#039900'
     } else if (isNaN(input.value)){
         text.innerHTML = `Ви ввели не рік`
     } else if (leapYear(Number(input.value)) === false) {
         text.innerHTML = 'Ви народилися у звичайному році!'
-        text.style.color = '#039900'
     }
 })
