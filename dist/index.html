@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Magic</title>
+    
+    <script type="module" crossorigin src="/team-2/commonHelpers.js"></script>
+    <link rel="stylesheet" href="/team-2/assets/index-c07715e6.css">
+  </head>
+  <body>
+     <header class="header">
+    <div class="container header__container">
+        <img class="header__logo" src="../img/header-logo.png" alt="logo image">
+        <ul class="header__list">
+            <li id="header-item1" class="header__item">
+                <a href="#games" class="header__link">Інтерактив</a>
+                <button style="cursor: pointer" class="header__svg-button" type="button"><img class="header__svg" src="../img/header-vector.svg" alt="header vector"></button>
+            </li>
+            <li class="header-item">
+                <a href="#our-team" class="header__link">Наша команда</a>
+            </li>
+            <li class="header-item">
+                <a href="#footer" class="header__link">Контакти</a>
+            </li>
+        </ul>
+        <div class="header__div">
+            <button class="header__button"><img id="header-button1" src="../img/change-theme-light.png" alt="change theme to dark"><img id="header-button2" src="../img/change-theme-dark.png" alt="change theme to light"></button>
+            <p class="header__text">Вітаємо, User!</p>
+        </div>
+    </div>
+</header>
+     <section id="games" class="games">
+    <div class="container games__container">
+        <h1 class="games__title">Популярні інетрактивні ігри</h1>
+    </div>
+</section>
+     <section id="check-age" class="check-age">
+    <div class="line"></div>
+    <div class="container check-age__container">
+        <h2 class="check-age__title">Перевір в який рік ти народився</h2>
+        <div class="check-age__div">
+            <div class="check-age__input-div">
+                <input type="text" class="check-age__input" placeholder="Введіть рік народження">
+                <button class="check-age__button"><img class="finding-loup" src="../img/finding-loup.png" alt="finding loupe"></button>
+            </div>
+            <p class="check-age__text">Ви народилися у високосний рік!</p>
+        </div>
+    </div>
+</section>
+     <section class="guess-number">
+    <div class="container guess-number__container">
+        <div class="line"></div>
+        <h2 class="guess-number__title">Вгадай число, яке загадав комп’ютер(1 - 10)</h2>
+        <div class="guess-number__div">
+            <div class="guess-number__input-div">
+                <input type="text" class="guess-number__input" placeholder="Введіть число">
+                <button class="guess-number__button"><img class="finding-loup" src="../img/finding-loup.png" alt="finding loupe"></button>
+            </div>
+            <p class="guess-number__text">Вітаю, ви вгадали число! (number) </p>
+        </div>
+    </div>
+</section>
+     <section class="r-p-s">
+  <div class="line"></div>
+  <div class="container r-p-s__container">
+    <h2 class="r-p-s__title">Камінь - ножиці - папір</h2>
+    <div class="r-p-s__box">
+      <button class="r-p-s__button">
+        <img src="../img/stone.png" alt="rock" />
+      </button>
+      <button class="r-p-s__button">
+        <img src="../img/scissors.png" alt="scissors" />
+      </button>
+      <button class="r-p-s__button">
+        <img src="../img/paper.png" alt="paper" />
+      </button>
+      <div class="r-p-s__score">
+        <p class="r-p-s__text">Рахунок:</p>
+        <p class="r-p-s__text">
+          Комп’ютер - <span id="computer-score">0</span>
+        </p>
+        <p class="r-p-s__text">Ви - <span id="user-score">0</span></p>
+      </div>
+    </div>
+    <p class="r-p-s__result">Ви виграли раунд!</p>
+    <button class="r-p-s__computer-choice">Варіант комп'ютера</button>
+  </div>
+  <script src="../js/rock-paper-scissors.js"></script>
+</section>
+
+     <section class="calculator">
+    <div class="line"></div>
+    <div class="container calculator__container">
+        <h2 class="calculator__title">Калькулятор</h2>
+        <div class="calculator__div">
+            <input type="text" class="calculator__input1" placeholder="Введіть число">
+            <div class="calculator__button-div">
+                <button class="calculator__button" id="button1">+</button>
+                <button class="calculator__button" id="button2">*</button>
+                <button class="calculator__button" id="button3">-</button>
+                <button class="calculator__button" id="button4">/</button>
+            </div>
+            <input type="text" class="calculator__input2" placeholder="Введіть число">
+            <button class="calculator__equals">=</button>
+            <input type="text" class="calculator__input3" placeholder="Результат">
+        </div>
+    </div>
+</section>
+     <section class="age-calculator" >
+    <div class="line"></div>
+    <div class="container age-calculator__container">
+        <h2 class="age-calculator__title">Калькулятор часу</h2>
+        <div class="age-calculator__box">
+            <div class="age-calculator__input-box">
+                <input type="text" class="age-calculator__input" placeholder="Введіть число">
+                <button class="age-calculator__button"><img class="age-calculator__finding-loup" src="../img/finding-loup.png" alt="finding loupe"></button>
+            </div>
+            <img class="age-calculator__line-svg" src="../img/age-calculator.svg" alt="vector line">
+            <p class="age-calculator__text">3 дн. 15:45:01
+            </p>
+        </div>
+        <script src="../js/age-calculator.js"></script>
+</section>
+     <section class="dino">
+    <div class="line"></div>
+    <div class="container dino__container">
+        <h2 class="dino__title">Google динозавр</h2>
+        <div class="dino__game"></div>
+        <img class="dino__item" src="../img/standing_still.png" alt="dino that is standing still">
+        <button type="button" class="dino__button">Почати</button>
+    </div>
+</section>
+     <section class="football">
+  <div class="line"></div>
+  <div class="container football__container">
+    <h2 class="football__title">Футбол</h2>
+    <div class="football__field">
+      <img
+        src="../img/football.png"
+        alt="Футбольний м'яч"
+        class="football__img"
+      />
+    </div>
+  </div>
+  <script src="../js/football.js"></script>
+</section>
+
+     <section class="three-numbers">
+    <div class="line"></div>
+    <div class="container three-numbers__container">
+        <h2 class="three-numbers__title">Введіть 3 числа</h2>
+        <div class="three-numbers__div">
+            <input id="num1" class="three-numbers__input" type="text" placeholder="Введіть число">
+            <input id="num2"  class="three-numbers__input" type="text" placeholder="Введіть число">
+            <input id="num3"  class="three-numbers__input" type="text" placeholder="Введіть число">
+        </div>
+        <p class="three-numbers__text">Найбільше число, яке ви ввели - (число)</p>
+    </div>
+</section>
+     <section class="our-team" id="our-team">
+    <div class="line"></div>
+    <div class="container">
+        <h2 class="our-team__title">Наша команда</h2>
+        <div class="our-team__image-div">
+            <button id="button-arrow-left" class="our-team__arrow" type="button"><img src="../img/left-arrow.png" alt="left arrow"></button>
+            <img class="our-team__image" src="../img/andrey.jpg" alt="Студент 1">
+            <button id="button-arrow-right" class="our-team__arrow" type="button"><img src="../img/right-arrow.png" alt="right arrow"></button>
+        </div>
+        <p class="our-team__name">Андрій Норик</p>
+        <p class="our-team__text">Зробив модалку, футер та секції age-calculator, rock-paper-scissors та football</p>
+        <div class="our-team__div">
+            <div id="element1" class="our-team__element"></div>
+            <div id="element2" class="our-team__element"></div>
+            <!-- <div class="our-team__element"></div>
+            <div class="our-team__element"></div>
+            <div class="our-team__element"></div>
+            <div class="our-team__element"></div>
+            <div class="our-team__element"></div> -->
+        </div>
+    </div>
+</section>
+     <section class="select-scientist">
+    <div class="line"></div>
+    <div class="container select-scientist__container">
+        <h2 class="select-scientist__title">Обери вченого/их</h2>
+        <ul class="select-scientist__div-list">
+            <li class="select-scientist__div-item">
+                <h3 class="select-scientist__id">1.</h3>
+                <p class="select-scientist__name">Ім'я: <span class="scientist-name">Albert</span></p>
+                <p class="select-scientist__surname">Прізвище: <span class="scientist-surname">Einstein</span></p>
+                <p class="select-scientist__born">Рік народження: <span class="scientist-born">1879</span></p>
+                <p class="select-scientist__dead">Помер: <span class="scientist-dead">1955</span></p>
+                <div id="overlay1" class="select-scientist__overlay"></div>
+            </li>
+            <li class="select-scientist__div-item">
+                <h3 class="select-scientist__id">2.</h3>
+                <p class="select-scientist__name">Ім'я: <span class="scientist-name">Isaac</span></p>
+                <p class="select-scientist__surname">Прізвище: <span class="scientist-surname">Newton</span></p>
+                <p class="select-scientist__born">Рік народження: <span class="scientist-born">1643</span></p>
+                <p class="select-scientist__dead">Помер: <span class="scientist-dead">1727</span></p>
+                <div id="overlay2" class="select-scientist__overlay"></div>
+            </li>
+            <li class="select-scientist__div-item">
+                <h3 class="select-scientist__id">3.</h3>
+                <p class="select-scientist__name">Ім'я: <span class="scientist-name">Galileo</span></p>
+                <p class="select-scientist__surname">Прізвище: <span class="scientist-surname">Galilei</span></p>
+                <p class="select-scientist__born">Рік народження: <span class="scientist-born">1564</span></p>
+                <p class="select-scientist__dead">Помер: <span class="scientist-dead">1642</span></p>
+                <div id="overlay3" class="select-scientist__overlay"></div>
+            </li>
+            <li class="select-scientist__div-item">
+                <h3 class="select-scientist__id">4.</h3>
+                <p class="select-scientist__name">Ім'я: <span class="scientist-name">Marie</span></p>
+                <p class="select-scientist__surname">Прізвище: <span class="scientist-surname">Curie</span></p>
+                <p class="select-scientist__born">Рік народження: <span class="scientist-born">1867</span></p>
+                <p class="select-scientist__dead">Помер: <span class="scientist-dead">1934</span></p>
+                <div id="overlay4" class="select-scientist__overlay"></div>
+            </li>
+            <li class="select-scientist__div-item">
+                <h3 class="select-scientist__id">5.</h3>
+                <p class="select-scientist__name">Ім'я: <span class="scientist-name">Johannes</span></p>
+                <p class="select-scientist__surname">Прізвище: <span class="scientist-surname">Kepler</span></p>
+                <p class="select-scientist__born">Рік народження: <span class="scientist-born">1571</span></p>
+                <p class="select-scientist__dead">Помер: <span class="scientist-dead">1630</span></p>
+                <div id="overlay5" class="select-scientist__overlay"></div>
+            </li>
+            <li class="select-scientist__div-item">
+                <h3 class="select-scientist__id">6.</h3>
+                <p class="select-scientist__name">Ім'я: <span class="scientist-name">Nicolaus</span></p>
+                <p class="select-scientist__surname">Прізвище: <span class="scientist-surname">Copernicus</span></p>
+                <p class="select-scientist__born">Рік народження: <span class="scientist-born">1473</span></p>
+                <p class="select-scientist__dead">Помер: <span class="scientist-dead">1543</span></p>
+                <div id="overlay6" class="select-scientist__overlay"></div>
+            </li>
+            <li class="select-scientist__div-item">
+                <h3 class="select-scientist__id">7.</h3>
+                <p class="select-scientist__name">Ім'я: <span class="scientist-name">Max</span></p>
+                <p class="select-scientist__surname">Прізвище: <span class="scientist-surname">Planck</span></p>
+                <p class="select-scientist__born">Рік народження: <span class="scientist-born">1858</span></p>
+                <p class="select-scientist__dead">Помер: <span class="scientist-dead">1947</span></p>
+                <div id="overlay7" class="select-scientist__overlay"></div>
+            </li>
+            <li class="select-scientist__div-item">
+                <h3 class="select-scientist__id">8.</h3>
+                <p class="select-scientist__name">Ім'я: <span class="scientist-name">Katherine</span></p>
+                <p class="select-scientist__surname">Прізвище: <span class="scientist-surname">Blodgett</span></p>
+                <p class="select-scientist__born">Рік народження: <span class="scientist-born">1898</span></p>
+                <p class="select-scientist__dead">Помер: <span class="scientist-dead">1979</span></p>
+                <div id="overlay8" class="select-scientist__overlay"></div>
+            </li>
+            <li class="select-scientist__div-item">
+                <h3 class="select-scientist__id">9.</h3>
+                <p class="select-scientist__name">Ім'я: <span class="scientist-name">Ada</span></p>
+                <p class="select-scientist__surname">Прізвище: <span class="scientist-surname">Lovelace</span></p>
+                <p class="select-scientist__born">Рік народження: <span class="scientist-born">1815</span></p>
+                <p class="select-scientist__dead">Помер: <span class="scientist-dead">1852</span></p>
+                <div id="overlay9" class="select-scientist__overlay"></div>
+            </li>
+            <li class="select-scientist__div-item">
+                <h3 class="select-scientist__id">10.</h3>
+                <p class="select-scientist__name">Ім'я: <span class="scientist-name">Sarah E.</span></p>
+                <p class="select-scientist__surname">Прізвище: <span class="scientist-surname">Goode</span></p>
+                <p class="select-scientist__born">Рік народження: <span class="scientist-born">1855</span></p>
+                <p class="select-scientist__dead">Помер: <span class="scientist-dead">1905</span></p>
+                <div id="overlay10" class="select-scientist__overlay"></div>
+            </li>
+            <li class="select-scientist__div-item">
+                <h3 class="select-scientist__id">11.</h3>
+                <p class="select-scientist__name">Ім'я: <span class="scientist-name">Lise</span></p>
+                <p class="select-scientist__surname">Прізвище: <span class="scientist-surname">Meitner</span></p>
+                <p class="select-scientist__born">Рік народження: <span class="scientist-born">1878</span></p>
+                <p class="select-scientist__dead">Помер: <span class="scientist-dead">1968</span></p>
+                <div id="overlay11" class="select-scientist__overlay"></div>
+            </li>
+            <li class="select-scientist__div-item">
+                <h3 class="select-scientist__id">12.</h3>
+                <p class="select-scientist__name">Ім'я: <span class="scientist-name">Hanna</span></p>
+                <p class="select-scientist__surname">Прізвище: <span class="scientist-surname">Hammarström</span></p>
+                <p class="select-scientist__born">Рік народження: <span class="scientist-born">1829</span></p>
+                <p class="select-scientist__dead">Помер: <span class="scientist-dead">1909</span></p>
+                <div id="overlay12" class="select-scientist__overlay"></div>
+            </li>
+        </ul>
+        <ul class="select-scientist__button-list">
+            <li style="padding-left: 7%" class="select-scientist__button-item"><button id="button1id" style="width: 227px; margin-right: 38px;" class="select-scientist__button-btn" >Які вчені народилися в 19 ст.</button><button id="button2id" style="width: 298px;" class="select-scientist__button-btn">Знайти рік народження Albert Einshtein</button></li>
+            <li style="padding-left: 15.5%" class="select-scientist__button-item"><button id="button3id" style="width: 282px; margin-right: 38px;" class="select-scientist__button-btn">Відсортувати вчених за алфавітом</button><button id="button4id" style="width: 441px" class="select-scientist__button-btn">Знайти вчених, прізвища яких починаються на на літеру “С” </button></li>
+            <li class="select-scientist__button-item"><button id="button5id" style="width: 380px; margin-right: 38px;" class="select-scientist__button-btn">Відсортувати вчених за кількістю прожитих років</button><button id="button6id" style="width: 376px" class="select-scientist__button-btn">Видалити всіх вчених, ім’я яких починається на “А”</button></li>
+            <li style="padding-left: 4%; display: flex; justify-content: top" class="select-scientist__button-item"><button id="button7id" style="width: 329px; margin-right: 38px; height: 38px;" class="select-scientist__button-btn">Знайти вченого, який народився найпізніше</button><button id="button8id" style="width: 368px; text-align: left; border-radius: 22px" class="select-scientist__button-btn">Знайти вченого, який прожив найдовше і вченого, 
+                який прожив найменше</button></li>
+            <li style="padding-left: 2%" class="select-scientist__button-item"><button id="button9id" style="width: 489px" class="select-scientist__button-btn">1.  Знайти вчених, в яких співпадають перші літери імені і прізвища</button></li>
+            <li style="width: 589px; padding-left: 34%" class="select-scientist__button-item"><button id="button10id" style="width: 229px" class="select-scientist__button-btn">Відкрити всіх вчених</button></li>
+        </ul>
+    </div>
+</section>
+     <footer class="footer">
+  <div class="container footer__container">
+    <img class="footer__logo" src="../img/footer-logo.png" alt="logo image" />
+    <ul class="footer__list">
+      <li class="footer__item">Тел: +38 (123) 456 78 90</li>
+      <li class="footer__item">E-Mail: codingmagic@gmail.com</li>
+      <li class="footer__item">Facebook: CodingMagic</li>
+      <li class="footer__item">Twitter: CodingMagic</li>
+      <li class="footer__item">Instagram: CodingMagic</li>
+    </ul>
+    <div class="footer__box">
+      <input
+        type="text"
+        class="footer__input"
+        placeholder="Ваша ел. адреса..."
+      />
+      <button class="footer__button">
+        Підписатись
+      </button>
+      <p class="footer__text">
+        Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті
+      </p>
+    </div>
+  </div>
+</footer>
+
+    
+    
+  </body>
+</html>
