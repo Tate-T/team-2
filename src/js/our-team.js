@@ -31,7 +31,7 @@ button2.addEventListener("click", () => {
     if (image.src.endsWith("andrey.jpg")) {
         image.src = "../img/stas.jpg";
         name1.innerHTML = "Стас Трунов";
-        text.innerHTML = "Зробив секції header, check-age, calculator, guess-number, select-ssinetist, our-team, three-numbers, google dino";
+        text.innerHTML = "Зробив секції header, check-age, calculator, guess-number, select-scinetist, our-team, three-numbers, google dino";
         element2.style.width = '30px'
         element2.style.backgroundColor = '#797979'
         element1.style.width = '18px'
