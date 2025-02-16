@@ -150,6 +150,28 @@ button9.addEventListener('click', () => {
 
 
 
+button3.addEventListener('click', () => {
+    const list = document.querySelector('.select-scientist__div-list');
+    const items = [...list.querySelectorAll('.select-scientist__div-item')];
+    
+    items.sort((a, b) => {
+        const nameA = a.querySelector('.scientist-name').innerHTML.trim().toUpperCase();
+        const nameB = b.querySelector('.scientist-name').innerHTML.trim().toUpperCase();
+        list.innerHTML = ''
+        return nameA.localeCompare(nameB);
+    });
+    items.forEach((item) => {
+        list.appendChild(item)
+        const overlay = item.lastElementChild;
+        overlay.style.backgroundColor = 'transparent';
+    })
+    for (item of items){
+        
+    }
+});
+
+
+
 
 
 
