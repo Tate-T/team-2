@@ -1,15 +1,15 @@
-const gameField = document.querySelector(".football__field");
-const gameBall = document.querySelector(".football__img");
+const field = document.querySelector(".football__field");
+const ball = document.querySelector(".football__img");
 
-gameField.addEventListener("click", (event) => {
-  const fieldRect = gameField.getBoundingClientRect();
-  const ballSize = gameBall.offsetWidth;
+field.addEventListener("click", (event) => {
+  const fieldRect = field.getBoundingClientRect();
+  const ballSize = ball.offsetWidth;
 
-  let newX = event.clientX - fieldRect.left - ballSize / 2;
-  let newY = event.clientY - fieldRect.top - ballSize / 2;
+  let x = event.clientX - fieldRect.left - ballSize / 2;
+  let y = event.clientY - fieldRect.top - ballSize / 2;
 
-  newX = Math.max(0, Math.min(newX, gameField.clientWidth - ballSize));
-  newY = Math.max(0, Math.min(newY, gameField.clientHeight - ballSize));
+  x = Math.max(0, Math.min(x, field.clientWidth - ballSize));
+  y = Math.max(0, Math.min(y, field.clientHeight - ballSize));
 
-  gameBall.style.transform = `translate(${newX}px, ${newY}px)`;
+  ball.style.transform = `translate(${x}px, ${y}px)`;
 });
