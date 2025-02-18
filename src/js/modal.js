@@ -1,16 +1,15 @@
 (() => {
-    const headerModal = {
-      closeModalBtn: document.querySelector("[data-close-modal]"),
-      closeModal: document.querySelector("[data-close-modal-button]"),
-      modal: document.querySelector("[data-modal]"),
-    };
-  
-    headerModal.closeModalBtn.addEventListener("click", toogleModal);
-    headerModal.closeModal.addEventListener("click", toogleModal);
-  
-    function toogleModal(e) {
-      e.preventDefault();
-      headerModal.modal.classList.toggle("is-hidden");
-    }
-  })();
-  
+  const modalWindow = {
+    closeModal: document.querySelector("[data-close-modal]"),
+    closeModalBtn: document.querySelector("[data-close-modal-button]"),
+    modal: document.querySelector("[data-modal]"),
+  };
+
+  modalWindow.closeModal.addEventListener("click", toggleModal);
+  modalWindow.closeModalBtn.addEventListener("click", toggleModal);
+
+  function toggleModal() {
+    modalWindow.modal.classList.toggle("is-hidden");
+    document.body.classList.toggle("no-scroll");
+  }
+})();

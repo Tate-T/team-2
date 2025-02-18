@@ -7,3 +7,4 @@ import "./js/three-numbers.js";
 import "./js/dino.js";
 import "./js/select-scientist.js";
 import "./js/our-team.js";
+import "./js/footer-modal.js";
