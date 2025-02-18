@@ -10,22 +10,50 @@
         font-weight: 400;
     }
 
-    &__game {
+    @keyframes moveGround {
+        from {
+            background-position-x: 0;
+        }
+        to {
+            background-position-x: -100%;
+        }
+    }
+
+    #game {
         margin: 0 auto;
         width: 720px;
         height: 241px;
         background-image: url('../img/ground.png');
-        background-repeat: no-repeat;
-        background-position: center 160px;
-        background-size: 720px 10px;
+        background-repeat: repeat-x;
+        background-position-x: center;
+        background-position-y: 160px;
+        background-size: 420px 10px;
+    }
+    
+
+
+    #dinosour {
+        width: 50px;
+        height: 52px;
+        position: absolute;
+        left: 350px;
+        top: 222px;
     }
 
-    &__item {
+    #cactus {
         width: 45px;
         height: 47px;
         position: absolute;
-        left: 330px;
+        left: 730px;
         top: 226px;
+    }
+
+    &__points {
+        font-size: 14px;
+        position: absolute;
+        left: 29%;
+        top: 80px;
+        color: $change-text
     }
 
 
