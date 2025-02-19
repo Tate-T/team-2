@@ -8,7 +8,7 @@ const element2 = document.querySelector('#element2')
 
 button1.addEventListener("click", () => {
     if (image.src.endsWith("andrey.jpg")) {
-        image.src = "../img/stas.jpg";
+        image.src = "./img/stas.jpg";
         name1.innerHTML = "Стас Трунов";
         text.innerHTML = "Зробив секції header, check-age, calculator, guess-number, select-scinetist, our-team, three-numbers, google dino";
         element2.style.width = '30px';
@@ -16,7 +16,7 @@ button1.addEventListener("click", () => {
         element1.style.width = '18px'
         element1.style.backgroundColor = '#D9D9D9'
     } else {
-        image.src = "../img/andrey.jpg";
+        image.src = "./img/andrey.jpg";
         name1.innerHTML = "Андрій Норик";
         text.innerHTML =
             "Зробив модалку, футер та секції age-calculator, rock-paper-scissors та football";
@@ -29,7 +29,7 @@ button1.addEventListener("click", () => {
 
 button2.addEventListener("click", () => {
     if (image.src.endsWith("andrey.jpg")) {
-        image.src = "../img/stas.jpg";
+        image.src = "./img/stas.jpg";
         name1.innerHTML = "Стас Трунов";
         text.innerHTML = "Зробив секції header, check-age, calculator, guess-number, select-scinetist, our-team, three-numbers, google dino";
         element2.style.width = '30px'
@@ -37,7 +37,7 @@ button2.addEventListener("click", () => {
         element1.style.width = '18px'
         element1.style.backgroundColor = '#D9D9D9'
     } else {
-        image.src = "../img/andrey.jpg";
+        image.src = "./img/andrey.jpg";
         name1.innerHTML = "Андрій Норик";
         text.innerHTML =
             "Зробив модалку, футер та секції age-calculator, rock-paper-scissors та football";
