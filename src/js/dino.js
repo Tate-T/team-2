@@ -10,7 +10,7 @@ let isJumping = false;
 let jumpInterval;
 
 function change(){
-    dino.src = `../team-2/img/dino_run${index}.png`;
+    dino.src = `./team-2/img/dino_run${index}.png`;
     if (index == 2) {
         index = 1;
     } else {
