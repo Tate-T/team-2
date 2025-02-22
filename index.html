@@ -91,9 +91,10 @@
       </div>
     </div>
     <p class="r-p-s__result">Ви виграли раунд!</p>
-    <button type="button" class="r-p-s__computer-choice">Варіант комп'ютера</button>
+    <button type="button" class="r-p-s__computer-choice">
+      Варіант комп'ютера
+    </button>
   </div>
-  <script src="./js/rock-paper-scissors.js"></script>
 </section>
 
     <section class="calculator">
@@ -154,7 +155,6 @@
       />
     </div>
   </div>
-  <script src="../js/football.js"></script>
 </section>
 
     <section class="three-numbers">
@@ -319,12 +319,18 @@
         type="text"
         class="footer__input"
         placeholder="Ваша ел. адреса..."
+        id="emailInput"
       />
-      <button data-footer-modal-open type="button" class="footer__button">
+      <button
+        data-footer-modal-open
+        type="button"
+        class="footer__button"
+        id="subscribeBtn"
+      >
         Підписатись
       </button>
       <p class="footer__text">
-        Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті
+        Підписавшись, Ви зможете отримувати інформацію про новинки на сайті
       </p>
     </div>
   </div>
@@ -362,7 +368,7 @@
         src="data:image/webp;base64,UklGRogBAABXRUJQVlA4WAoAAAAQAAAAHQAAHQAAQUxQSDwBAAABkGLb2rI3577fH1T8ZAyR5eqOpXHlMCeyMBRmlAyqEhUzM1zxfjSEiJgAXrjlp+RPdwKI5hMfBBhPThlP1pqyjSnJRYslv936v8y07npCIIRaURjAONSCwiHYdyqFQ40UDoFcoHCoyahDwPaXgMJjTcbKXm0vG2micIjCAoVDTVA4ilP7QOEQjVAYAzhECwghASIXRnXytPzfPlIA6bD/ebWoV7y+3QPnv6ysrXy92kHXXhW1Fq8lJqWr99bun01MSncna1nC0DFGGHo/12PK3z2ZgDRlPInrdcBICMCoyeWkA2LKeBIdUDrb4PlRgUCUnnvWgAnBHefXE9qF/6kWsOOPAH3aCuA9Xl4rn82SV9fyg05ZGl9fLV+00P4nq6XrD/YImZp6clADpjK5X4dv10F3/W2Dqjb/9gMBVlA4ICYAAADQAgCdASoeAB4APlEkj0WjoiEUBAA4BQS0gAAe0dAAAP78+EAAAA=="
         alt="game-development"
       />
-      <input class="modal__input" type="text" placeholder="Ваше ім’я..." />
+      <input required class="modal__input" type="text" placeholder="Ваше ім’я..." />
       <button data-close-modal-button type="button" class="modal__savebutton">
         Зберегти
       </button>
