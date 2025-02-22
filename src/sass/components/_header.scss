@@ -25,6 +25,11 @@
         font-size: 12px;
     }
 
+    &__link:hover, &__link:focus {
+        color: #32826f;
+        transition-duration: 0.3s;
+    }
+
     &__svg-button {
         background-color: transparent;
         position: absolute;
