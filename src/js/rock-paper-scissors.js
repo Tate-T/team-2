@@ -12,8 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
   buttons.forEach((button) => {
     const img = button.querySelector("img");
     button.dataset.choice = img.alt;
-    button.addEventListener("click", () => playRound(button.dataset.choice));
+    button.addEventListener("click", () => {
+      playRound(button.dataset.choice)
+      console.log('test')
   });
+  });
+
+  
 
   function getComputerChoice() {
     return choices[Math.floor(Math.random() * choices.length)];
