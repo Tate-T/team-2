@@ -12,7 +12,7 @@ function convertMinutes() {
 
   let hours = Math.floor(totalMinutes / 60);
   let minutes = totalMinutes % 60;
-  
+
   outputText.textContent = `Результат: ${hours}:${minutes}`;
 }
 
