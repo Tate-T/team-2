@@ -12,6 +12,7 @@ button1.addEventListener('click', () => {
     if (alternateStyles) {
         alternateStyles.disabled = !alternateStyles.disabled;
     }
+    console.log(alternateStyles)
 
 })
 
