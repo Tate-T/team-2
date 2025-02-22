@@ -63,6 +63,11 @@
         font-size: 12px;
     }
 
+    &__button-btn:hover, &__button-btn:focus {
+        background-color: #32826f;
+        transition-duration: 0.3s;
+    }
+
     &__id {
         font-family: "Montserrat Alternates", sans-serif;
         font-weight: 400;

@@ -1,0 +1,55 @@
+.tic-tac-toes {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+
+    &__title {
+        text-align: center;
+        margin-bottom: 40px;
+        color: $black-text;
+        font-size: 16px;
+        font-family: Montserrat Alternates;
+        font-weight: 400;
+    }
+
+
+    &__box {
+        display: flex;
+        width: 381px;
+        height: 381px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        gap: 7px;
+    }
+
+    &__item {
+        width: 120px;
+        height: 120px;
+        border-radius: 8px;
+        background-color: $input-color;
+        border: none;
+        
+    }
+
+    &__button {
+        cursor: pointer;
+        width: 120px;
+        height: 120px;
+        border-radius: 10px;
+        background-color: $input-color;
+        border: none;
+    }
+
+    &__article {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: $change-text;
+        margin-top: 40px;
+    }
+}

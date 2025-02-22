@@ -28,7 +28,13 @@
     border-radius: 20px;
     background-color: $black-text;
     cursor: pointer;
+    border: none;
   }
+
+  &__button:hover, &__button:focus {
+    background-color: #32826f;
+    transition-duration: 0.3s;
+}
 
   &__text {
     color: $black-text;

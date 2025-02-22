@@ -48,7 +48,14 @@
     padding: 10px 10px;
     background-color: $black-text;
     font-family: "Montserrat Alternates", sans-serif;
+    border: none;
   }
+
+  
+  &__button:hover, &__button:focus {
+    background-color: #32826f;
+    transition-duration: 0.3s;
+}
 
   &__text {
     margin-top: 18px;

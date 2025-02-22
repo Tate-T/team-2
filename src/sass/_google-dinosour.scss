@@ -30,7 +30,11 @@
         background-size: 420px 10px;
     }
     
-
+    &__button:hover, &__button:focus {
+        background-color: #32826f;
+        transition-duration: 0.3s;
+    }
+    
 
     #dinosour {
         width: 50px;
