@@ -1,15 +1,16 @@
 const choices = ["rock", "scissors", "paper"];
 let scores = { user: 0, computer: 0 };
 
-const resultText = document.querySelector(".r-p-sresult");
+const resultText = document.querySelector(".r-p-s__result");
 const userScoreEl = document.querySelector("#user-score");
 const computerScoreEl = document.querySelector("#computer-score");
-const computerChoiceBtn = document.querySelector(".r-p-scomputer-choice");
+const computerChoiceBtn = document.querySelector(".r-p-s__computer-choice");
 
 const buttons = document.querySelectorAll(".r-p-s__button");
 
 buttons.forEach((button) => {
   const img = button.querySelector("img");
+  if (!img) return;
   button.dataset.choice = img.alt;
   button.addEventListener("click", () => playRound(button.dataset.choice));
 });
@@ -46,5 +47,5 @@ function updateUI(result, computerChoice) {
   resultText.textContent = result;
   userScoreEl.textContent = scores.user;
   computerScoreEl.textContent = scores.computer;
-  computerChoiceBtn.textContent = `Комп'ютер вибрав: ${computerChoice}`;
+  computerChoiceBtn.innerText = `Комп'ютер вибрав: ${computerChoice}`;
 }
