@@ -31,6 +31,7 @@
         border-radius: 8px;
         background-color: $input-color;
         border: none;
+        position: relative
         
     }
 
@@ -52,4 +53,52 @@
         color: $change-text;
         margin-top: 40px;
     }
+
+    &__x {
+        font-size: 76px;
+        position: absolute;
+        top: 11px;
+        left: 37px;
+        color: $black-text;
+        display: none;
+    }
+
+    &__o {
+        font-size: 68px;
+        position: absolute;
+        top: 11px;
+        left: 37px;
+        display: none;
+    }
+
+    &__text {
+        color: $black-text;
+        font-size: 12px;
+        font-family: Montserrat Alternates;
+        font-weight: 400;
+        line-height: 20.4px;
+      }
+    
+    
+      &__computer-choice {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        background-color: $black-text;
+        font-size: 12px;
+        font-family: Montserrat Alternates;
+        font-weight: 400;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+      }
+    
+      &__score {
+        position: absolute;
+        right: 20%;
+        top: 44%
+      }
 }
