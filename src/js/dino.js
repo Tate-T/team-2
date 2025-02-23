@@ -6,11 +6,12 @@ let gameInterval;
 let cactusInterval;
 let groundInterval;
 const points = document.querySelector('#points')
+const text = document.querySelector('.dino__text')
 let isJumping = false;
 let jumpInterval;
 
 function change(){
-    dino.src = `/team-2/assets/dino_run${index}.png`;
+    dino.src = `./img/dino_run${index}.png`;
     if (index == 2) {
         index = 1;
     } else {
@@ -42,7 +43,7 @@ function cactusMove (){
         clearInterval(gameInterval); 
         clearInterval(cactusInterval);
         clearInterval(groundInterval);
-        alert(`Ви програли, в вас було ${points.innerHTML} очків`);
+        text.innerHTML = `Ви програли, в вас було ${points.innerHTML} очків`;
         dino.style.left = '350px';
         cactus.style.left = '730px';
         dino.src = './img/standing_still.png'
