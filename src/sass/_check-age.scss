@@ -1,48 +1,72 @@
 .check-age {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     position: relative;
     // border-top: 1px solid $black-text;
     // width: 800px;
     // margin: 0 auto;
     // display: block;
+
+    @media screen and (min-width: 1200px){
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
     
 
     &__title {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+        
+
+        @media screen and (min-width: 1200px){
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 50px;
+        }
     }
 
     &__div {
         // outline: solid red;
         display: flex;
         justify-content: center;
-        gap: 200px;
+        gap: 60px;
         align-items: center;
         position: relative;
+
+        
+        @media screen and (min-width: 1200px){
+            gap: 200px;
+        }
 
     }
 
     &__input {
-        width: 180px;
-        height: 40px;
+        width: 120px;
+        height: 30px;
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
         border: none;
         background-color: $input-color;
         color: $input-text;
-        font-size: 12px;
+        font-size: 8px;
         padding-left: 15px;
         font-family: "Montserrat Alternates", sans-serif;
         font-weight: 400;
         box-shadow: 7px 4px 5px #d2c5c5;
+
+        @media screen and (min-width: 1200px){
+            width: 180px;
+            height: 40px;
+            font-size: 12px;
+            padding-left: 15px;
+        }
     }
 
     &__button {
         background-color: transparent;
-        margin-left: 0;
         position: absolute;
         border: none;
         top: 0;
@@ -52,12 +76,23 @@
     }
 
     .finding-loup {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
+
+        @media screen and (min-width: 1200px){
+            width: 40px;
+            height: 40px;
+
+        }
     }
 
     &__text {
-        font-size: 12px;
+        font-size: 8px;
         color: $change-text;
+
+        @media screen and (min-width: 1200px){
+            font-size: 12px;
+
+        }
     }
 }
