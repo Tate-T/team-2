@@ -14,17 +14,17 @@ let jumpDownInterval;
 let jumpInterval;
 let isJumping = false;
 
-function change(){
+// function change(){
     
-    if (index == 2) {
-        index = 1;
-        dino.src = `./img/dino_run1.png`;
-    } else if (index == 1) {
-        index = 2
-        dino.src = `./img/dino_run2.png`;
-    }
-    console.log('Image path:', dino.src);
-}
+//     if (index == 2) {
+//         index = 1;
+//         dino.src = `./img/dino_run1.png`;
+//     } else if (index == 1) {
+//         index = 2
+//         dino.src = `./img/dino_run2.png`;
+//     }
+//     console.log('Image path:', dino.src);
+// }
 
 // function jump() {
 //     dino.style.top = '10px'
@@ -64,6 +64,8 @@ function cactusMove (){
     }
 }
 
+let jumpHeight = 0;
+
 function groundMove (){
     const div = document.querySelector('#game')
     div.style.animation = 'moveGround 1.1s linear infinite'
@@ -77,26 +79,23 @@ function jump() {
         return;
     }
 
-    isJumping = true;
-    let jumpHeight = 0;
+
     let isGoingUp = true;
     dino.style.top = '222px'
     jumpInterval = setInterval(() => {
-
+        isJumping = true;
         let currentTop = parseInt(window.getComputedStyle(dino).top);
-        
-
         if (isGoingUp) {
-            if (jumpHeight < 80) {
-                dino.style.top = `${currentTop - 10}px`; // Move up smoothly
-                jumpHeight += 10;
+            if (jumpHeight < 100) {
+                dino.style.top = `${currentTop - 8}px`;
+                jumpHeight += 8;
             } else {
                 isGoingUp = false;
             }
         } else {
             if (jumpHeight > 0) {
-                dino.style.top = `${currentTop + 10}px`; // Move down smoothly
-                jumpHeight -= 10;
+                dino.style.top = `${currentTop + 8}px`;
+                jumpHeight -= 8;
             } else {
                 clearInterval(jumpInterval);
                 isJumping = false;
@@ -106,70 +105,10 @@ function jump() {
     }, 25);
 }
 
-// function jumpUp (){
-//     if (jumpUpInterval) {
-//         clearInterval(jumpUpInterval);
-//         clearInterval(jumpDownInterval);
-//     }
-
-//     if (isJumpingUp){
-//         return;
-//     } 
-
-//     dino.style.top = '222px'
-//     isJumpingUp = true; 
-//     let jumpHeight = 0;
-//     jumpUpInterval = setInterval(() => {
-//         if (jumpHeight < 80) {
-//             dino.style.top = `${parseInt(window.getComputedStyle(dino).top) - 5}px`;
-//             jumpHeight += 5;
-//         } else {
-//             clearInterval(jumpUpInterval); 
-//             isJumpingUp = false; 
-//             isJumpingDown = true;
-//         }
-//     }, 25); 
-// }
-
-// function jumpDown (){
-//     if (jumpDownInterval) {
-//         clearInterval(jumpDownInterval);
-//         clearInterval(jumpUpInterval);
-//     }
-
-//     if (isJumpingDown){
-//         return;
-//     } 
-
-//     isJumpingDown = true; 
-//     let jumpHeight = 80;
-//     jumpDownInterval = setInterval(() => {
-//         if (isJumpingUp === false && isJumpingDown === true) {
-//             dino.style.top = `${parseInt(window.getComputedStyle(dino).top) + 5}px`;
-//             jumpHeight -= 5;
-//         } else if (jumpHeight === 0) {
-//             clearInterval(jumpDownInterval); 
-//             isJumpingUp = false; 
-//             isJumpingDown = false;
-//         }
-//     }, 25); 
-// }
-
-// document.addEventListener('keydown', (event) => {
-//     if (event.code === 'Space') {
-//         jumpUp();
-//     }
-// });
-
-// document.addEventListener('keyup', (event) => {
-//     if (event.code === 'Space') {
-//         jumpDown();
-//     }
-// });
 
 document.addEventListener('keydown', (event) => {
-    if (event.code === 'Space') {
-        jump(); 
+    if (event.code === 'Space' && isJumping === false) {
+        jump()
     }
 });
 
@@ -189,7 +128,7 @@ startButton.addEventListener('click', () => {
     groundInterval = setInterval(groundMove, 10);
     gameInterval = setInterval(() => {
         getPoints()
-        change()
+        // change()
     }, 100);
 
 })
