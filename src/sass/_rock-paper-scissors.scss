@@ -1,34 +1,60 @@
 .r-p-s {
-  padding-top: 36px;
-  padding-bottom: 36px;
+  padding-top: 26px;
+  padding-bottom: 26px;
   position: relative;
+
+  @media screen and (min-width: 1200px){
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+}
 
   &__title {
     text-align: center;
-    margin-bottom: 36px;
+    margin-bottom: 26px;
     color: $black-text;
-    font-size: 16px;
+    font-size: 14px;
     font-family: Montserrat Alternates;
     font-weight: 400;
+
+    @media screen and (min-width: 1200px){
+      font-size: 16px;
+      margin-bottom: 36px;
+  
+  }
   }
 
   &__box {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 38px;
-    margin-bottom: 36px;
+    gap: 28px;
+    margin-bottom: 26px;
+
+    @media screen and (min-width: 1200px){
+      gap: 38px;
+      margin-bottom: 36px;
+  
+  }
   }
 
   &__button {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     gap: 10px;
     padding: 10px;
     border-radius: 20px;
     background-color: $black-text;
     cursor: pointer;
     border: none;
+
+    @media screen and (min-width: 1200px){
+      width: 60px;
+      height: 60px;
+      gap: 10px;
+      padding: 10px;
+  
+  }
   }
 
   &__button:hover, &__button:focus {
@@ -38,19 +64,32 @@
 
   &__text {
     color: $black-text;
-    font-size: 12px;
+    font-size: 10px;
     font-family: Montserrat Alternates;
     font-weight: 400;
     line-height: 20.4px;
+
+    @media screen and (min-width: 1200px){
+      font-size: 12px;
+  
+  }
   }
 
   &__result {
     color: $change-text;
     text-align: center;
-    font-size: 12px;
+    font-size: 10px;
     font-family: Montserrat Alternates;
     font-weight: 400;
-    margin-bottom: 36px;
+    margin-bottom: 26px;
+
+    @media screen and (min-width: 1200px){
+      font-size: 12px;
+      font-family: Montserrat Alternates;
+      font-weight: 400;
+      margin-bottom: 36px;
+  
+  }
   }
 
   &__computer-choice {
@@ -59,18 +98,43 @@
     margin-right: auto;
     color: white;
     background-color: $black-text;
-    font-size: 12px;
+    font-size: 10px;
     font-family: Montserrat Alternates;
     font-weight: 400;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 18px;
+    padding-right: 18px;
     border-radius: 20px;
+
+    @media screen and (min-width: 1200px){
+      font-size: 12px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 20px;
+  
+  }
   }
 
   &__score {
-    position: absolute;
-    right: 20%;
+    position: static;;
+
+    @media screen and (min-width: 1200px){
+      position: absolute;
+      right: 20%;
+  
+  }
+  }
+
+  &__img {
+    width: 30px;
+    height: 30px;
+    @media screen and (min-width: 1200px){
+      width: 40px;
+      height: 40px;
+  
+  }
   }
 }

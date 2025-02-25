@@ -29,18 +29,26 @@ input:focus {
     height: 0.5px;
     background-color: $black-text;
     position: absolute;
-    width: 536px;
+    width: 320px;
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @media screen and (min-width: 1200px){
+        width: 536px;
+    }
 }
 
 body {
     background-image: url('../img/background.png');
-    background-position: center 100px;
+    background-position: center 50px;
     background-repeat: no-repeat;
-    background-size: 1440px 4000px;
-    background-color: $background
+    background-size: 360px 4500px;
+    background-color: $background;
+
+    @media screen and (min-width: 1200px){
+        background-size: 1440px 4500px;
+    }
 }
 
 .container {
@@ -48,16 +56,29 @@ body {
     padding-right: 10px;
     padding-left: 10px;
     width: 1070px;
+    width: 100%;
+    outline: solid red;
+    max-width: 350px;
+
+    @media screen and (min-width: 1200px){
+        max-width: 1070px;
+    }
     
-    // outline: solid red;
 }
 
 section {
     background-color: $white-background;
-    width: 1090px;
+    width: 100%;
     margin: 0 auto;
+
+    @media screen and (min-width: 1200px){
+        width: 1090px;
+    }
 }
 
 header {
     background-color: $white-background;
+    margin: 0 auto;
+    width: 100%;
+
 }
