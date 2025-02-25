@@ -7,15 +7,21 @@ let cactusInterval;
 let groundInterval;
 const points = document.querySelector('#points')
 const text = document.querySelector('.dino__text')
-let isJumping = false;
+let isJumpingUp = false;
+let isJumpingDown = true;
+let jumpUpInterval;
+let jumpDownInterval;
 let jumpInterval;
+let isJumping = false;
 
 function change(){
-    dino.src = `./img/dino_run${index}.png`;
+    
     if (index == 2) {
         index = 1;
-    } else {
-        index += 1
+        dino.src = `./img/dino_run1.png`;
+    } else if (index == 1) {
+        index = 2
+        dino.src = `./img/dino_run2.png`;
     }
     console.log('Image path:', dino.src);
 }
@@ -67,31 +73,106 @@ function jump() {
     if (jumpInterval) {
         clearInterval(jumpInterval);
     }
-    if (isJumping){
+    if (isJumping) {
         return;
-    } 
-    dino.style.top = '222px'
-    isJumping = true; 
+    }
+
+    isJumping = true;
     let jumpHeight = 0;
+    let isGoingUp = true;
+    dino.style.top = '222px'
     jumpInterval = setInterval(() => {
-        if (jumpHeight < 80) {
-            dino.style.top = `${parseInt(window.getComputedStyle(dino).top) - 5}px`; // Move up
-            jumpHeight += 5;
-        } else if (jumpHeight >= 80 && jumpHeight < 130) {
-            dino.style.top = `${parseInt(window.getComputedStyle(dino).top) + 8}px`; // Move down
-            jumpHeight += 5;
+
+        let currentTop = parseInt(window.getComputedStyle(dino).top);
+        
+
+        if (isGoingUp) {
+            if (jumpHeight < 80) {
+                dino.style.top = `${currentTop - 10}px`; // Move up smoothly
+                jumpHeight += 10;
+            } else {
+                isGoingUp = false;
+            }
         } else {
-            clearInterval(jumpInterval); 
-            isJumping = false; 
+            if (jumpHeight > 0) {
+                dino.style.top = `${currentTop + 10}px`; // Move down smoothly
+                jumpHeight -= 10;
+            } else {
+                clearInterval(jumpInterval);
+                isJumping = false;
+                dino.style.top = '222px'
+            }
         }
-    }, 25); 
+    }, 25);
 }
+
+// function jumpUp (){
+//     if (jumpUpInterval) {
+//         clearInterval(jumpUpInterval);
+//         clearInterval(jumpDownInterval);
+//     }
+
+//     if (isJumpingUp){
+//         return;
+//     } 
+
+//     dino.style.top = '222px'
+//     isJumpingUp = true; 
+//     let jumpHeight = 0;
+//     jumpUpInterval = setInterval(() => {
+//         if (jumpHeight < 80) {
+//             dino.style.top = `${parseInt(window.getComputedStyle(dino).top) - 5}px`;
+//             jumpHeight += 5;
+//         } else {
+//             clearInterval(jumpUpInterval); 
+//             isJumpingUp = false; 
+//             isJumpingDown = true;
+//         }
+//     }, 25); 
+// }
+
+// function jumpDown (){
+//     if (jumpDownInterval) {
+//         clearInterval(jumpDownInterval);
+//         clearInterval(jumpUpInterval);
+//     }
+
+//     if (isJumpingDown){
+//         return;
+//     } 
+
+//     isJumpingDown = true; 
+//     let jumpHeight = 80;
+//     jumpDownInterval = setInterval(() => {
+//         if (isJumpingUp === false && isJumpingDown === true) {
+//             dino.style.top = `${parseInt(window.getComputedStyle(dino).top) + 5}px`;
+//             jumpHeight -= 5;
+//         } else if (jumpHeight === 0) {
+//             clearInterval(jumpDownInterval); 
+//             isJumpingUp = false; 
+//             isJumpingDown = false;
+//         }
+//     }, 25); 
+// }
+
+// document.addEventListener('keydown', (event) => {
+//     if (event.code === 'Space') {
+//         jumpUp();
+//     }
+// });
+
+// document.addEventListener('keyup', (event) => {
+//     if (event.code === 'Space') {
+//         jumpDown();
+//     }
+// });
 
 document.addEventListener('keydown', (event) => {
     if (event.code === 'Space') {
-        jump();
+        jump(); 
     }
 });
+
 
 startButton.addEventListener('click', () => {
 
