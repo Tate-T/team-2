@@ -11,14 +11,21 @@
 }
 
 .modal {
-  width: 576px;
-  height: 316px;
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 20px;
   background-color: $background;
+  width: 356px;
+  height: 326px;
+
+  @media screen and (min-width: 1200px){
+    width: 576px;
+    height: 316px;
+
+}
 
   &__form {
     display: flex;
@@ -29,33 +36,53 @@
   &__closesvgbutton {
     display: flex;
     align-items: center;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border: none;
     background-color: $background;
     position: absolute;
     right: 30px;
     top: 30px;
     cursor: pointer;
+
+    @media screen and (min-width: 1200px){
+      width: 15px;
+      height: 15px;
+  
+  }
   }
 
   &__text {
     color: $black-text;
     text-align: center;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
-    padding-top: 46px;
-    margin-bottom: 42px;
+    padding-top: 36px;
+    margin-bottom: 32px;
     font-family: Inter;
+
+    @media screen and (min-width: 1200px){
+      font-size: 12px;
+      font-weight: 400;
+      padding-top: 46px;
+      margin-bottom: 42px;
+  
+  }
   }
 
   &__typename {
     color: $black-text;
     text-align: center;
-    font-size: 12px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
     font-family: Inter;
+
+    
+    @media screen and (min-width: 1200px){
+      font-size: 12px;
+  
+  }
   }
 
   &__input {
@@ -72,22 +99,34 @@
     background-color: $input-color;
     color: $input-text;
     font-family: "Montserrat Alternates";
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
+
+    @media screen and (min-width: 1200px){
+      font-size: 12px;
+  
+  }
   }
 
   &__savebutton {
-    width: 105px;
-    height: 35px;
-    padding: 10px 20px;
+    width: 95px;
+    height: 30px;
+    padding: 6px 20px;
     border-radius: 20px;
     color: $background;
     background-color: $black-text;
     box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
     font-family: "Montserrat Alternates";
     cursor: pointer;
+
+    @media screen and (min-width: 1200px){
+      font-size: 12px;
+      width: 105px;
+      height: 35px;
+  
+  }
   }
 }
 

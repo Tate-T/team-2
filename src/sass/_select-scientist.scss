@@ -26,10 +26,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 25px;
-        width: 100%; 
-        max-width: 360px; 
-        margin: 0 auto 30px; 
-        outline: green; 
+        width: 360px;; 
         height: 100%;
 
         @media screen and (min-width: 1200px){

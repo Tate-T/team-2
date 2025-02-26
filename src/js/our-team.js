@@ -9,6 +9,8 @@ const stas = document.querySelector('#stas')
 const andrey = document.querySelector('#andrey')
 let index = 1
 
+console.log(button1)
+
 // button1.addEventListener("click", () => {
 //     if (image.src.endsWith("andrey.jpg")) {
 //         image.src = "./img/stas.jpg";
