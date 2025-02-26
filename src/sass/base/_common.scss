@@ -15,7 +15,7 @@ body {
 }
 
 input:focus {
-    background-color: #e5f3a8;
+    background-color: #a8e5f3;
     transition-duration: 0.3s;
 }
 
@@ -57,7 +57,7 @@ body {
     padding-left: 10px;
     width: 1070px;
     width: 100%;
-    outline: solid red;
+    // outline: solid red;
     max-width: 350px;
 
     @media screen and (min-width: 1200px){
