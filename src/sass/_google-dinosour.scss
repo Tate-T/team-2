@@ -2,10 +2,13 @@
     padding-top: 30px;
     padding-bottom: 30px;
     position: relative;
+    width: 360px;
+
 
     @media screen and (min-width: 1200px){
         padding-top: 40px;
         padding-bottom: 40px;
+        width: 1090px;
     }
 
     &__title {
@@ -61,7 +64,7 @@
         width: 30px;
         height: 32px;
         position: absolute;
-        left: 39%;
+        left: 22%;
         top: 157px;
 
         @media screen and (min-width: 1200px){
@@ -77,7 +80,7 @@
         width: 21px;
         height: 23px;
         position: absolute;
-        left: 57%;
+        left: 73%;
         top: 165px;
 
         @media screen and (min-width: 1200px){
@@ -92,7 +95,7 @@
     &__points {
         font-size: 10px;
         position: absolute;
-        left: 36%;
+        left: 12%;
         top: 60px;
         color: $black-text;
 
@@ -119,7 +122,7 @@
         padding-right: 8px;
         cursor: pointer;
         top: 60px;
-        right: 36%;
+        right: 12%;
         border: none;
         background-color: $black-text;
         color: $white-background;
