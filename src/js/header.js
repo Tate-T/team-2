@@ -10,7 +10,6 @@ const toggleButton = document.querySelector(".header__svg-button");
 const interactiveLink = document.querySelector("#interactive-link");
 const popupBox = document.querySelector(".header__box");
 
-
 button1.addEventListener("click", () => {
   button1.style.display = "none";
   button2.style.display = "inherit";
@@ -34,6 +33,7 @@ function togglePopup(event) {
   event.stopPropagation();
   popupBox.classList.toggle("active");
 }
+
 
 toggleButton.addEventListener("click", togglePopup);
 interactiveLink.addEventListener("click", togglePopup);
