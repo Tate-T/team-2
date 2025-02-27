@@ -9,9 +9,11 @@
     const emailInput = document.querySelector("#emailInput");
     const email = emailInput.value.trim();
 
-    if (email === "" || !email.includes("@")) {
-      alert("Будь ласка, введіть коректну електронну адресу.");
+    if (email === "" || !email.includes("@") || !email.includes(".")) {
+      emailInput.style.border = "2px solid red";
       return;
+    } else {
+      emailInput.style.border = "2px solid green";
     }
 
     toggleModal();

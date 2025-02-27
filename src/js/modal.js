@@ -8,18 +8,32 @@
 
   modalWindow.closeModal.addEventListener("click", toggleModal);
   modalWindow.closeModalBtn.addEventListener("click", handleSaveClick);
+  modalWindow.input.addEventListener("input", validateInput);
 
   function toggleModal() {
     modalWindow.modal.classList.toggle("is-hidden");
     document.body.classList.toggle("no-scroll");
   }
 
-  function handleSaveClick() {
-    if (modalWindow.input.value.trim() === "") {
-      alert("Будь ласка, введіть своє ім’я!");
-      modalWindow.input.focus();
+  function validateInput() {
+    const value = modalWindow.input.value.trim();
+
+    if (value.length < 2) {
+      modalWindow.input.style.border = "2px solid red";
     } else {
-      toggleModal();
+      modalWindow.input.style.border = "2px solid green";
     }
+  }
+
+  function handleSaveClick() {
+    const value = modalWindow.input.value.trim();
+
+    if (value.length < 2) {
+      modalWindow.input.style.border = "2px solid red";
+      modalWindow.input.focus();
+      return;
+    }
+
+    toggleModal();
   }
 })();
