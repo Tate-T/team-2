@@ -14,17 +14,17 @@ let jumpDownInterval;
 let jumpInterval;
 let isJumping = false;
 
-// function change(){
+function change(){
     
-//     if (index == 2) {
-//         index = 1;
-//         dino.src = `./img/dino_run1.png`;
-//     } else if (index == 1) {
-//         index = 2
-//         dino.src = `./img/dino_run2.png`;
-//     }
-//     console.log('Image path:', dino.src);
-// }
+    if (index == 2) {
+        index = 1;
+        dino.src = `./img/dino_run1.png`;
+    } else if (index == 1) {
+        index = 2
+        dino.src = `./img/dino_run2.png`;
+    }
+    console.log('Image path:', dino.src);
+}
 
 // function jump() {
 //     dino.style.top = '10px'

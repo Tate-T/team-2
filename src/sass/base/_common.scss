@@ -44,10 +44,11 @@ body {
     background-position: center 50px;
     background-repeat: no-repeat;
     background-size: 360px 4500px;
-    background-color: $background;
+    background-color: #FFFFFF;
 
     @media screen and (min-width: 1200px){
         background-size: 1440px 4500px;
+        background-color: $background;
     }
 }
 
