@@ -3,7 +3,9 @@ const text = document.querySelector('.guess-number__text')
 const input = document.querySelector('.guess-number__input')
 button.addEventListener('click', () => {
     let randomNum = Math.round(Math.random() * (10 - 1) + 1)
-    if (Number(input.value) === randomNum){
+    if (input.value.length === 0) {
+        text.innerHTML = `Ви нічого не ввели`
+    } else if (Number(input.value) === randomNum){
         text.innerHTML = `Вітаю, ви вгадали число! (${randomNum})`
     } else if (isNaN(input.value)){
         text.innerHTML = `Ви ввели не число`
@@ -11,5 +13,9 @@ button.addEventListener('click', () => {
         text.innerHTML = `Ваше число занадто велике`
     } else if (Number(input.value) !== randomNum) {
         text.innerHTML = `Ви не вгадали! Загадане число було (${randomNum})`
-    }  
+    }  else if (input.value.length === 0) {
+        text.innerHTML = `Ви нічого не ввели`
+    }  else if (Number(input.value) === randomNum){
+        text.innerHTML = `Вітаю, ви вгадали число! (${randomNum})`
+    }
 })
