@@ -52,7 +52,7 @@ function cactusMove (){
         text.innerHTML = `Ви програли, в вас було ${points.innerHTML} очків`;
         dino.style.left = '350px';
         cactus.style.left = '730px';
-        dino.src = './img/standing_still.png'
+        dino.style.display = 'inherit'
         const div = document.querySelector('#game')
         div.style.animation = 'none'
         points.innerHTML = '0'
